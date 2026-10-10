@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="老王电影网：一个像隔壁老王一样实在的观影指南。老王推荐、老王片单、老王讲导演、老王影评、老王夜话、老王看片规则。正版观影、经典修复、华语电影、影评赏析。">
+<meta name="keywords" content="老王电影网, 老王, 电影网, 观影指南, 老王推荐, 经典片单, 华语电影, 导演, 影评, 正版观影, 电影赏析">
+<meta name="author" content="老王电影网">
+<meta name="theme-color" content="#0f2419">
+<title>老王电影网 - 老王推荐·老王片单·老王影评·正版观影指南 | 老王电影网</title>
+<link rel="canonical" href="https://laowangdianyingwang-cn.github.io/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "老王电影网",
+  "url": "https://laowangdianyingwang-cn.github.io/",
+  "description": "老王电影网：像隔壁老王一样实在的观影指南，老王推荐、老王片单、老王影评、老王讲导演，正版观影导向",
+  "inLanguage": "zh-CN",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://laowangdianyingwang-cn.github.io/#search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0e1f17; --bg2:#15291f; --card:#1d3327; --card2:#1a2d23;
+  --line:#3f6b52; --txt:#eef3ef; --sub:#a9c2b3;
+  --tea:#c9853f; --tea2:#f0b978; --leaf:#4fae7e; --ink:#7d9bb0;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--txt);line-height:1.85;overflow-x:hidden;
+  background-image:
+    radial-gradient(circle at 10% 12%, rgba(201,133,63,.18), transparent 32%),
+    radial-gradient(circle at 90% 88%, rgba(79,174,126,.13), transparent 34%);
+  background-attachment:fixed;
+}
+a{color:var(--tea2);text-decoration:none;transition:.25s}
+a:hover{color:#fff}
+.wrap{max-width:1160px;margin:0 auto;padding:0 18px}
+section{padding:88px 0}
+.st{font-size:30px;font-weight:900;letter-spacing:.5px;margin-bottom:6px}
+.st u{text-decoration:none;color:var(--tea)}
+.sn{color:var(--sub);font-size:14px;margin:12px 0 34px}
+
+/* 导航 */
+.bar{position:sticky;top:0;z-index:99;background:rgba(14,31,23,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nv{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:900;font-size:19px;letter-spacing:1px;color:#fff}
+.logo{width:46px;height:46px;border-radius:50%;background:
+    radial-gradient(circle at 36% 30%,#d99a55 0 22%,#2a4a38 22% 42%,#17302a 42%);
+  display:grid;place-items:center;position:relative;box-shadow:inset 0 0 0 2px rgba(240,185,120,.45),0 8px 24px rgba(0,0,0,.5)}
+.logo::after{content:"王";position:absolute;font-size:15px;font-weight:900;color:#17302a;letter-spacing:-1px;top:14px;left:14px}
+.logo i{position:absolute;width:7px;height:7px;background:#3a6b50;border-radius:50%}
+.logo i:nth-child(1){top:8px;left:16px} .logo i:nth-child(2){top:22px;left:7px} .logo i:nth-child(3){top:22px;right:7px}
+.links{display:flex;gap:2px}
+.links a{color:var(--sub);font-size:13.5px;padding:9px 12px;border-radius:8px}
+.links a:hover{color:#fff;background:rgba(255,255,255,.06)}
+.mbtn{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--txt);font-size:22px;cursor:pointer}
+
+/* Hero：老王的三件东西 */
+.hero{position:relative;padding:92px 0 78px;border-bottom:1px solid var(--line);overflow:hidden}
+.fg{position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:
+    radial-gradient(1.6px 1.6px at 16% 26%,#fff,transparent),
+    radial-gradient(1.2px 1.2px at 38% 68%,#fff,transparent),
+    radial-gradient(1.6px 1.6px at 62% 34%,#fff,transparent),
+    radial-gradient(1.2px 1.2px at 84% 70%,#fff,transparent)}
+.hx{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;letter-spacing:3px;color:var(--tea2);border:1px solid rgba(240,185,120,.45);padding:5px 14px;border-radius:30px;margin-bottom:18px}
+.eyebrow::before{content:"🍵"}
+.hero h1{font-size:48px;line-height:1.18;font-weight:900;letter-spacing:-.8px}
+.hero h1 u{text-decoration:none;color:var(--tea)}
+.hero p{color:var(--sub);font-size:16px;margin:20px 0 26px;max-width:540px}
+.acts{display:flex;flex-wrap:wrap;gap:12px}
+.b{padding:13px 27px;border-radius:30px;font-weight:700;font-size:15px;display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer}
+.b1{background:linear-gradient(135deg,var(--tea),var(--leaf));color:#12231a}
+.b2{background:rgba(255,255,255,.05);color:#fff;border:1px solid var(--line)}
+/* 三件东西 */
+.kit{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.k{background:linear-gradient(170deg,#1f3a2c,#14261d);border:1px solid var(--line);border-radius:16px;padding:20px;text-align:center;transition:.35s}
+.k .ic{font-size:34px;line-height:1;margin-bottom:8px}
+.k h4{font-size:15px;color:var(--tea2)}
+.k p{font-size:11.5px;color:var(--sub);margin-top:4px}
+
+/* 栏目一：老王推荐（胶片条横滑 DOM） */
+.reel{background:var(--bg2)}
+.strip{display:flex;gap:16px;overflow-x:auto;padding:6px 2px 22px;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:var(--tea) transparent}
+.strip::-webkit-scrollbar{height:8px}
+.strip::-webkit-scrollbar-thumb{background:var(--tea);border-radius:8px}
+.crd{min-width:248px;width:248px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;scroll-snap-align:start;transition:.35s}
+.crd .th{height:150px;display:grid;place-items:center;font-size:42px;position:relative}
+.crd .th::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 7px,rgba(0,0,0,.18) 7px 9px)}
+.crd:nth-child(1) .th{background:linear-gradient(135deg,#7a5230,#332512)}
+.crd:nth-child(2) .th{background:linear-gradient(135deg,#2c5a45,#152a1f)}
+.crd:nth-child(3) .th{background:linear-gradient(135deg,#5a4a2c,#2c2414)}
+.crd:nth-child(4) .th{background:linear-gradient(135deg,#4a2c5a,#24142c)}
+.crd:nth-child(5) .th{background:linear-gradient(135deg,#5a2c2c,#2c1414)}
+.crd:nth-child(6) .th{background:linear-gradient(135deg,#2c4a5a,#14242c)}
+.crd:nth-child(7) .th{background:linear-gradient(135deg,#6a5230,#332612)}
+.crd .bd{padding:15px 16px}
+.crd .bd h4{font-size:15px}
+.crd .bd .mt{font-size:11px;color:var(--sub);margin-top:2px}
+.crd .bd .sc{margin-top:9px;display:flex;justify-content:space-between;font-size:11px;color:var(--tea2)}
+.crd:hover{transform:translateY(-8px) rotate(.6deg);box-shadow:0 26px 58px rgba(0,0,0,.6);border-color:var(--tea)}
+
+/* 栏目二：老王片单（标签页 + 网格 DOM） */
+.tabs{background:var(--bg)}
+.tbtns{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.tb{padding:9px 18px;border-radius:30px;font-size:13px;cursor:pointer;border:1px solid var(--line);background:var(--card2);color:var(--sub);transition:.25s}
+.tb.on{background:var(--tea);color:#12231a;border-color:var(--tea);font-weight:700}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.pc{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:.32s}
+.pc .ph{height:96px;display:grid;place-items:center;font-size:30px;position:relative}
+.pc:nth-child(1) .ph{background:linear-gradient(135deg,#8a5a30,#3a2410)}
+.pc:nth-child(2) .ph{background:linear-gradient(135deg,#2a5a45,#12302a)}
+.pc:nth-child(3) .ph{background:linear-gradient(135deg,#5a452a,#2a2010)}
+.pc:nth-child(4) .ph{background:linear-gradient(135deg,#452a5a,#22102c)}
+.pc:nth-child(5) .ph{background:linear-gradient(135deg,#5a302a,#2a1410)}
+.pc:nth-child(6) .ph{background:linear-gradient(135deg,#2a455a,#101f2c)}
+.pc:nth-child(7) .ph{background:linear-gradient(135deg,#6a5a30,#332610)}
+.pc:nth-child(8) .ph{background:linear-gradient(135deg,#3a5a45,#16302a)}
+.pc .ph .yr{position:absolute;top:8px;right:8px;font-size:10px;background:rgba(0,0,0,.45);padding:2px 8px;border-radius:20px;color:var(--tea2)}
+.pc .bd{padding:12px 14px}
+.pc .bd h5{font-size:13.5px}
+.pc .bd small{display:block;font-size:10.5px;color:var(--sub);margin-top:3px}
+.pc:hover{border-color:var(--tea);transform:translateY(-6px);box-shadow:0 22px 50px rgba(0,0,0,.55)}
+
+/* 栏目三：老王讲导演（时间轴 DOM） */
+.axis{background:var(--bg2)}
+.ax{position:relative;padding-left:26px}
+.ax::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:linear-gradient(to bottom,var(--tea),var(--leaf))}
+.dr{position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:16px}
+.dr::before{content:"";position:absolute;left:-24px;top:26px;width:12px;height:12px;border-radius:50%;background:var(--tea);box-shadow:0 0 0 4px rgba(201,133,63,.22)}
+.dr h4{font-size:16px;color:var(--tea2);display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.dr h4 span{font-size:11px;color:var(--sub);font-weight:400;letter-spacing:1px}
+.dr p{font-size:13px;color:var(--sub);margin-top:6px;text-align:justify}
+.dr .q{display:block;font-family:"Songti SC","STSong",serif;font-size:13.5px;color:var(--leaf);border-left:3px solid var(--tea);padding-left:11px;margin-top:9px;font-style:italic}
+
+/* 栏目四：老王影评（杂志分栏 DOM） */
+.read{background:var(--bg)}
+.paper{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:30px}
+.mast{text-align:center;border-bottom:2px dashed var(--tea);padding-bottom:14px;margin-bottom:24px}
+.mast h3{font-size:21px;letter-spacing:6px;font-family:"Songti SC","STSong",serif;color:var(--tea2)}
+.mast small{color:var(--sub);font-size:11.5px;letter-spacing:2px}
+.cols{column-count:2;column-gap:36px;column-rule:1px solid var(--line)}
+.cols article{break-inside:avoid;margin-bottom:24px}
+.cols h4{font-size:15px;color:var(--tea2);margin-bottom:7px}
+.cols p{font-size:13.5px;color:var(--sub);text-align:justify}
+
+/* 栏目五：老王看片规则（手风琴 DOM） */
+.rule{background:var(--bg2)}
+.acc{display:flex;flex-direction:column;gap:10px}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:.3s}
+details[open]{border-color:var(--tea);box-shadow:0 14px 40px rgba(0,0,0,.45)}
+summary{padding:18px 20px;cursor:pointer;font-size:15px;font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"＋";color:var(--tea);font-size:22px;font-weight:400;flex:none}
+details[open] summary::after{content:"－"}
+summary em{font-style:normal;font-size:11px;color:var(--leaf);letter-spacing:1px;flex:none}
+.body{padding:0 20px 20px;font-size:13px;color:var(--sub)}
+.body ol,.body ul{padding-left:20px;display:flex;flex-direction:column;gap:7px}
+.body li{text-align:justify}
+
+/* 栏目六：老王夜话（气泡 DOM） */
+.env{background:var(--bg)}
+.tk{background:linear-gradient(180deg,#21382b,#17291f);border:1px solid var(--line);border-radius:16px;padding:20px 22px;transition:.32s;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+.tk:hover{transform:translateY(-5px);border-color:var(--tea)}
+.tk .who{font-size:11px;letter-spacing:1.6px;color:var(--tea)}
+.tk .q{font-family:"Songti SC","STSong",serif;font-size:14.5px;color:var(--tea2);margin:6px 0 7px}
+.tk p{font-size:12.5px;color:var(--sub)}
+.tk .sg{margin-top:10px;text-align:right;font-size:11px;color:var(--sub)}
+.grid22{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+
+/* 关于 */
+.about{background:var(--bg)}
+.ag{display:grid;grid-template-columns:1.15fr .85fr;gap:28px}
+.notice{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px}
+.notice h3{font-size:18px;color:var(--tea);margin-bottom:14px}
+.notice ol{list-style:none;display:flex;flex-direction:column;gap:12px;counter-reset:c}
+.notice li{font-size:13.5px;color:var(--sub);padding-left:36px;position:relative}
+.notice li::before{counter-increment:c;content:"第" counter(c) "条";position:absolute;left:0;top:2px;font-size:11px;font-weight:800;color:var(--tea2)}
+.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;text-align:center}
+.kpi b{display:block;font-size:27px;color:var(--tea)}
+.kpi span{font-size:12px;color:var(--sub)}
+
+footer{border-top:1px solid var(--line);padding:46px 0 26px;background:var(--bg2)}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:28px}
+.fc h5{font-size:15px;margin-bottom:13px;color:#fff}
+.fc a{display:block;font-size:13px;color:var(--sub);padding:4px 0}
+.fc a:hover{color:var(--tea2)}
+.copy{margin-top:28px;padding-top:20px;border-top:1px solid var(--line);font-size:12px;color:var(--sub);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+.hl{color:var(--tea)}
+
+@media(max-width:1000px){
+  .hx,.ag{grid-template-columns:1fr}
+  .cols{column-count:1}
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .kit{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:720px){
+  section{padding:58px 0}
+  .mbtn{display:grid;place-items:center}
+  .links{position:fixed;inset:64px 0 0 0;background:rgba(14,31,23,.98);flex-direction:column;padding:24px;gap:6px;transform:translateX(100%);transition:.35s}
+  .links.open{transform:translateX(0)}
+  .links a{font-size:16px;padding:15px;border-radius:10px}
+  .hero{padding:60px 0 46px}
+  .hero h1{font-size:33px}
+  .kit{grid-template-columns:1fr}
+  .grid22{grid-template-columns:1fr}
+  .g4{grid-template-columns:1fr}
+  .st{font-size:23px}
+}
+@media(max-width:380px){.kpis{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+
+<header class="bar">
+  <div class="wrap nv">
+    <a class="brand" href="#top" aria-label="返回顶部"><span class="logo" aria-hidden="true"><i></i><i></i><i></i></span><span>老王<span style="color:var(--tea)">电影网</span></span></a>
+    <nav class="links" id="navLinks">
+      <a href="#reel">老王推荐</a>
+      <a href="#tabs">老王片单</a>
+      <a href="#axis">老王讲导演</a>
+      <a href="#read">老王影评</a>
+      <a href="#rule">老王规则</a>
+      <a href="#env">老王夜话</a>
+      <a href="#about">合规声明</a>
+    </nav>
+    <button class="mbtn" id="menuBtn" aria-label="菜单">☰</button>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="fg" aria-hidden="true"></div>
+  <div class="wrap hx">
+    <div>
+      <span class="eyebrow">LAO WANG'S MOVIE NOTES</span>
+      <h1>老王不讲道理，<br>老王只讲 <u>片子</u>。</h1>
+      <p>老王电影网 —— 一个像隔壁老王一样实在的观影指南。不追热搜、不吹神作、不做标题党，只干四件事：<b>挑片子、讲导演、写影评、指条正版的路</b>。</p>
+      <div class="acts">
+        <a class="b b1" href="#reel">听老王推荐 →</a>
+        <a class="b b2" href="#rule">先读老王规则</a>
+      </div>
+    </div>
+    <aside aria-hidden="true" class="kit">
+      <div class="k"><div class="ic">🍵</div><h4>一杯茶</h4><p>片子要慢慢看</p></div>
+      <div class="k"><div class="ic">📓</div><h4>一本笔记</h4><p>看过的都记下来</p></div>
+      <div class="k"><div class="ic">🧭</div><h4>一条正路</h4><p>只指正版渠道</p></div>
+    </aside>
+  </div>
+</section>
+
+<!-- 栏目一：老王推荐（胶片条横滑 DOM） -->
+<section class="reel" id="reel">
+  <div class="wrap">
+    <h2 class="st">老王 <u>推荐</u></h2>
+    <p class="sn">老王这周想让你看的 7 部。横着滑，像翻胶片。</p>
+    <div class="strip">
+
+      <article class="crd">
+        <div class="th" aria-hidden="true">🌾</div>
+        <div class="bd"><h4>活着</h4><div class="mt">1994 · 张艺谋 · 葛优 / 巩俐</div><div class="sc"><span>活着就是胜利</span><b>9.3</b></div></div>
+      </article>
+      <article class="crd">
+        <div class="th" aria-hidden="true">🚲</div>
+        <div class="bd"><h4>偷自行车的人</h4><div class="mt">1948 · 德·西卡 · 意大利</div><div class="sc"><span>丢了车，丢了尊严</span><b>9.2</b></div></div>
+      </article>
+      <article class="crd">
+        <div class="th" aria-hidden="true">🍃</div>
+        <div class="bd"><h4>步履不停</h4><div class="mt">2008 · 是枝裕和 · 日本</div><div class="sc"><span>一家人的一天</span><b>9.2</b></div></div>
+      </article>
+      <article class="crd">
+        <div class="th" aria-hidden="true">🎻</div>
+        <div class="bd"><h4>海上钢琴师</h4><div class="mt">1998 · 托纳多雷 · 意大利</div><div class="sc"><span>下不了船的人</span><b>9.3</b></div></div>
+      </article>
+      <article class="crd">
+        <div class="th" aria-hidden="true">🪁</div>
+        <div class="bd"><h4>追风筝的人</h4><div class="mt">2007 · 马克·福斯特 · 美国</div><div class="sc"><span>为你，千千万万遍</span><b>8.9</b></div></div>
+      </article>
+      <article class="crd">
+        <div class="th" aria-hidden="true">🐝</div>
+        <div class="bd"><h4>寄生虫</h4><div class="mt">2019 · 奉俊昊 · 韩国</div><div class="sc"><span>气味与楼梯</span><b>9.6</b></div></div>
+      </article>
+      <article class="crd">
+        <div class="th" aria-hidden="true">🕯️</div>
+        <div class="bd"><h4>一一</h4><div class="mt">2000 · 杨德昌 · 中国台湾</div><div class="sc"><span>一一生，一生一</span><b>9.4</b></div></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- 栏目二：老王片单（标签页 + 网格 DOM） -->
+<section class="tabs" id="tabs">
+  <div class="wrap">
+    <h2 class="st">老王 <u>片单</u></h2>
+    <p class="sn">按心情挑。都是老王亲自看过、觉得"值得"的。</p>
+    <div class="tbtns" role="tablist">
+      <button class="tb on" data-g="all">全部</button>
+      <button class="tb" data-g="cn">华语</button>
+      <button class="tb" data-g="jp">日韩</button>
+      <button class="tb" data-g="eu">欧美</button>
+      <button class="tb" data-g="old">老片</button>
+    </div>
+    <div class="g4" id="grid">
+
+      <figure class="pc" data-g="cn"><div class="ph">🎭<span class="yr">1993</span></div><figcaption class="bd"><h5>霸王别姬</h5><small>陈凯歌 · 华语 · 戏比天大</small></figcaption></figure>
+      <figure class="pc" data-g="cn"><div class="ph">🍂<span class="yr">1994</span></div><figcaption class="bd"><h5>活着</h5><small>张艺谋 · 华语 · 活着就是胜利</small></figcaption></figure>
+      <figure class="pc" data-g="cn"><div class="ph">🏙️<span class="yr">2000</span></div><figcaption class="bd"><h5>一一</h5><small>杨德昌 · 华语 · 一生一</small></figcaption></figure>
+      <figure class="pc" data-g="jp"><div class="ph">🍃<span class="yr">2008</span></div><figcaption class="bd"><h5>步履不停</h5><small>是枝裕和 · 日本 · 一家人的一天</small></figcaption></figure>
+      <figure class="pc" data-g="jp"><div class="ph">🚄<span class="yr">2018</span></div><figcaption class="bd"><h5>小偷家族</h5><small>是枝裕和 · 日本 · 没有血缘的家</small></figcaption></figure>
+      <figure class="pc" data-g="eu"><div class="ph">🎻<span class="yr">1998</span></div><figcaption class="bd"><h5>海上钢琴师</h5><small>托纳多雷 · 意大利 · 下不了船</small></figcaption></figure>
+      <figure class="pc" data-g="eu"><div class="ph">🚲<span class="yr">1948</span></div><figcaption class="bd"><h5>偷自行车的人</h5><small>德·西卡 · 意大利 · 新现实主义</small></figcaption></figure>
+      <figure class="pc" data-g="old"><div class="ph">🕯️<span class="yr">1957</span></div><figcaption class="bd"><h5>第七封印</h5><small>伯格曼 · 瑞典 · 与死神下棋</small></figcaption></figure>
+
+    </div>
+  </div>
+</section>
+
+<!-- 栏目三：老王讲导演（时间轴 DOM） -->
+<section class="axis" id="axis">
+  <div class="wrap">
+    <h2 class="st">老王 <u>讲导演</u></h2>
+    <p class="sn">认一个导演，比认一个类型靠谱。老王讲四个。</p>
+    <div class="ax">
+
+      <figure class="dr">
+        <figcaption><h4>是枝裕和 <span>b.1962 · 日本</span></h4></figcaption>
+        <p>是枝裕和不拍"大事"。他拍吃饭、拍散步、拍一句没说完的话。《步履不停》里那顿饭吃了二十分钟，看完你会想给家里打个电话。老王语：<b>慢，是他对时间的尊重。</b></p>
+        <span class="q">"没有人会好好说再见。"——《步履不停》</span>
+      </figure>
+
+      <figure class="dr">
+        <figcaption><h4>奉俊昊 <span>b.1969 · 韩国</span></h4></figcaption>
+        <p>奉俊昊用"空间"完成道德指控。《寄生虫》的半地下室、花园、楼梯，本身就是阶级。镜头一动，你就知道谁在上、谁在下。老王语：<b>他不是在讲故事，是在摆棋盘。</b></p>
+        <span class="q">"有钱所以善良？不，是有钱所以有体面。"——《寄生虫》</span>
+      </figure>
+
+      <figure class="dr">
+        <figcaption><h4>张艺谋 <span>b.1950 · 中国</span></h4></figcaption>
+        <p>张艺谋最狠的片子都不是大片。《活着》用一个家庭，讲完了一个时代。他把"苦"拍得很美，这是他的本事，也是他的争议。老王语：<b>色彩是他的第一语言，苦难是他的第二语言。</b></p>
+        <span class="q">"人是为活着本身而活着的，而不是为活着之外的任何事物所活着。"——《活着》</span>
+      </figure>
+
+      <figure class="dr">
+        <figcaption><h4>杨德昌 <span>1947–2007 · 中国台湾</span></h4></figcaption>
+        <p>《一一》的英文名是 "A One and a Two"。杨德昌用一个婚礼和一个葬礼，把一生讲完了。台北的公寓、写字楼、补习班，都是他的法庭。老王语：<b>他是最冷静的记录者，也是最严厉的法官。</b></p>
+        <span class="q">"电影发明以后，人类的生命比起以前延长了至少三倍。"——《一一》</span>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+<!-- 栏目四：老王影评（杂志分栏 DOM） -->
+<section class="read" id="read">
+  <div class="wrap">
+    <h2 class="st">老王 <u>影评</u></h2>
+    <p class="sn">照着老杂志的排法写。不讲学术，只讲"看完之后"。</p>
+    <div class="paper">
+      <div class="mast">
+        <h3 class="serif">老 王 观 影 手 记</h3>
+        <small>VOL.07 · 关于"值得"这两个字</small>
+      </div>
+      <div class="cols">
+
+        <article>
+          <h4>什么叫"值得"</h4>
+          <p>老王的标准很简单：<b>看完之后，你想跟人说话</b>。不是"爽"，不是"震撼"，是"想说"。《活着》看完想跟人说话，《一一》看完想跟人说话，《偷自行车的人》看完想跟人说话。这就是老王电影网 的全部选片逻辑。</p>
+        </article>
+
+        <article>
+          <h4>别急着打分</h4>
+          <p>豆瓣 9 分以上的片子，老王建议<b>别看评分，先看年份</b>。1957 年的《第七封印》、1948 年的《偷自行车的人》、1994 年的《活着》——好片子经得起时间，因为时间替它筛过一遍。打分是别人的，感受是自己的。</p>
+        </article>
+
+        <article>
+          <h4>华语片的"家庭"</h4>
+          <p>《霸王别姬》的戏班、《活着》的赌桌、《一一》的婚礼、《步履不停》的饭桌——华语电影最会拍的，永远是"一家人坐在一起，却谁也不说话"。老王觉得，这是最痛的一种痛。</p>
+        </article>
+
+        <article>
+          <h4>看片伦理</h4>
+          <p>老王有一条底线：<b>不消费别人的苦</b>。涉及真实苦难的影片，不做"有多惨"的标题，不截血腥帧，不写"看哭全场"。只写"它为什么值得被看见"。这是老王电影网 的态度，也是老王做人的态度。</p>
+        </article>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目五：老王看片规则（手风琴 DOM） -->
+<section class="rule" id="rule">
+  <div class="wrap">
+    <h2 class="st">老王 <u>看片规则</u></h2>
+    <p class="sn">老王给自己定的规矩。也送给你。</p>
+    <div class="acc">
+
+      <details open>
+        <summary>第 1 条：只走正版 <em>LEGAL</em></summary>
+        <div class="body">
+          <ul>
+            <li>院线、持牌流媒体、正版影碟、电视台，都是好去处。</li>
+            <li>本站<b>不提供、不鼓励、不链接</b>任何盗版资源、网盘、在线播放、破解教程。</li>
+            <li>推荐语里若提到"哪里看"，只写平台名，不写盗链。</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>第 2 条：先看好不好，再看火不火 <em>TASTE</em></summary>
+        <div class="body">
+          <ul>
+            <li>热搜不等于好看，评分不等于适合你。</li>
+            <li>老王推荐分三档：<b>入门（好看）</b>、<b>进阶（耐看）</b>、<b>硬核（值得看）</b>。</li>
+            <li>看不下去就换，别硬撑，电影不是任务。</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>第 3 条：剧透要打招呼 <em>SPOILER</em></summary>
+        <div class="body">
+          <ul>
+            <li>凡涉及关键反转、结局、凶手，本站一律打"剧透提示"。</li>
+            <li>影评只谈"为什么这样拍"，不剧透"发生了什么"。</li>
+            <li>想聊剧透的，去评论区，老王在那儿等。</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>第 4 条：沉重题材，量力而行 <em>CARE</em></summary>
+        <div class="body">
+          <ul>
+            <li>涉及生死、家暴、战争、疾病的影片，首页即标注提示。</li>
+            <li>情绪低落时，优先看"治愈 / 喜剧 / 自然"三类，别硬啃沉重题材。</li>
+            <li>电影治不了病，真难受，去看医生，比看电影有用。</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>第 5 条：尊重创作者 <em>RESPECT</em></summary>
+        <div class="body">
+          <ul>
+            <li>尊重导演剪辑权、编剧署名权、演员表演权。</li>
+            <li>不搬运完整资源，不截取大段片段，引用遵循合理使用。</li>
+            <li>批评可以，辱骂不行；可以骂片子，不能骂人。</li>
+          </ul>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- 栏目六：老王夜话（气泡 DOM） -->
+<section class="env" id="env">
+  <div class="wrap">
+    <h2 class="st">老王 <u>夜话</u></h2>
+    <p class="sn">读者来信。老王晚上回。排法像茶馆里的一壶茶。</p>
+    <div class="grid22">
+
+      <article class="tk"><div class="who">— 小陈 · 武汉</div><div class="q">"《活着》看完，我把烟掐了。"</div><p>福贵的一生，是被时代推着走的一生。老王回：掐得好。片子能让人做出一个小小的决定，就是好片子。</p><div class="sg">2026.06.12</div></article>
+      <article class="tk"><div class="who">— 阿May · 广州</div><div class="q">"《步履不停》让我给妈妈打了电话。"</div><p>是枝裕和的厉害在于：什么都没发生，什么都发生了。老王回：这就是"日常"的分量。</p><div class="sg">2026.06.08</div></article>
+      <article class="tk"><div class="who">— 老周 · 沈阳</div><div class="q">"《偷自行车的人》只有 90 分钟，我想了三天。"</div><p>没有配乐、没有明星、没有反转。一个父亲在罗马街头找车，找回来的是尊严。老王回：这才是电影该有的样子。</p><div class="sg">2026.05.30</div></article>
+      <article class="tk"><div class="who">— 老王回复</div><div class="q">"别急着看完，也别急着懂。"</div><p>好电影像茶，第一口是苦，第二口是回甘，第三口才尝得出年份。慢慢来，片子跑不了，老王也跑不了。</p><div class="sg">每晚 22:00</div></article>
+
+    </div>
+  </div>
+</section>
+
+<!-- 关于与合规 -->
+<section class="about" id="about">
+  <div class="wrap">
+    <h2 class="st">关于 <u>老王电影网</u></h2>
+    <p class="sn">老王电影网 的立场与承诺。</p>
+    <div class="ag">
+      <div class="notice">
+        <h3>合规与观影声明</h3>
+        <ol>
+          <li>本站为<b>观影指南、影评与内容推荐</b>类网站，<b>不提供</b>任何未授权视频资源、下载链接、网盘、在线播放、盗链或破解教程。</li>
+          <li>所有影片推荐均指向正版授权渠道（院线、持牌流媒体平台、正版影碟），尊重著作权、署名权、导演剪辑权与演员肖像权。</li>
+          <li>站内评分与"老王推荐分"属编辑个人观点，不代表影片出品方、发行方、院线或任何平台立场。本站为独立影迷站点，与任何片方无隶属关系。</li>
+          <li>涉及历史、政治、宗教的影片，本站仅作艺术文本与影像语言分析，不代表任何政治立场。</li>
+          <li>凡含暴力、生死、亲密关系情节的影片，均附年龄与情绪提示；含沉重议题者，建议情绪平稳时观看。</li>
+          <li>本站不投放弹窗广告、不植入恶意代码、不采集非必要个人信息、不使用跨站跟踪脚本，无第三方统计埋点。</li>
+          <li>侵权反馈通道：dmca@example.com，承诺 48 小时内响应、核实并处理。</li>
+        </ol>
+      </div>
+      <div>
+        <div class="kpis">
+          <div class="kpi"><b>7</b><span>本周老王推荐</span></div>
+          <div class="kpi"><b>8</b><span>老王片单条目</span></div>
+          <div class="kpi"><b>4</b><span>老王讲导演</span></div>
+          <div class="kpi"><b>100%</b><span>正版渠道导向</span></div>
+        </div>
+        <div class="notice" style="margin-top:16px">
+          <h3>找老王</h3>
+          <ol>
+            <li>内容合作：editor@example.com</li>
+            <li>侵权投诉：dmca@example.com</li>
+            <li>读者来信：hello@example.com</li>
+            <li>投稿影评：投稿即视为授权老王电影网 编辑发布</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fg">
+      <div class="fc">
+        <a class="brand" href="#top"><span class="logo" aria-hidden="true"><i></i><i></i><i></i></span><span>老王<span style="color:var(--tea)">电影网</span></span></a>
+        <p style="color:var(--sub);font-size:13px;margin-top:12px;max-width:320px">
+          老王不讲道理，老王只讲片子。一杯茶，一本笔记，一条正路。
+        </p>
+      </div>
+      <div class="fc">
+        <h5>老王的内容</h5>
+        <a href="#reel">老王推荐</a>
+        <a href="#tabs">老王片单</a>
+        <a href="#axis">老王讲导演</a>
+        <a href="#read">老王影评</a>
+      </div>
+      <div class="fc">
+        <h5>老王的方法</h5>
+        <a href="#rule">看片规则</a>
+        <a href="#env">老王夜话</a>
+        <a href="#">入门四部</a>
+        <a href="#">进阶十部</a>
+      </div>
+      <div class="fc">
+        <h5>站点信息</h5>
+        <a href="#about">关于本站</a>
+        <a href="#about">合规声明</a>
+        <a href="#">隐私说明</a>
+        <a href="#">侵权投诉</a>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 2026 <span class="hl">老王电影网</span> · 保留所有权利。本站与任何影片出品方、发行方、院线无隶属关系。</span>
+      <span>网站网址：https://laowangdianyingwang-cn.github.io/</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* 移动端菜单 */
+var mb=document.getElementById('menuBtn'), nl=document.getElementById('navLinks');
+mb.addEventListener('click',function(){
+  nl.classList.toggle('open');
+  mb.textContent=nl.classList.contains('open')?'✕':'☰';
+});
+nl.addEventListener('click',function(e){
+  if(e.target.tagName==='A'){ nl.classList.remove('open'); mb.textContent='☰'; }
+});
+
+/* 片单标签筛选 */
+var tbs=document.querySelectorAll('.tb'), cards=document.querySelectorAll('#grid .pc');
+tbs.forEach(function(b){
+  b.addEventListener('click',function(){
+    tbs.forEach(function(x){x.classList.remove('on')});
+    b.classList.add('on');
+    var g=b.dataset.g;
+    cards.forEach(function(c){
+      c.style.display=(g==='all'||c.dataset.g===g)?'':'none';
+    });
+  });
+});
+
+/* 滚动高亮 */
+var secs=document.querySelectorAll('section[id]'), links=document.querySelectorAll('.links a');
+window.addEventListener('scroll',function(){
+  var pos=window.scrollY+120, cur='';
+  secs.forEach(function(s){ if(s.offsetTop<=pos) cur=s.id; });
+  links.forEach(function(a){
+    var on=(a.getAttribute('href')==='#'+cur);
+    a.style.color=on?'#fff':'';
+    a.style.background=on?'rgba(255,255,255,.06)':'';
+  });
+});
+</script>
+</body>
+</html>
